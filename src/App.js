@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [animalChoice, setAnimalChoice] = useState('');
 
+  const onChange = (e) => {
+    setAnimalChoice(e.target.value)
+  }
+
+  return (
+    <main className='App' onChange = {(e) => onChange(e)}>
+      <h1 className='header'> Do you like Dogs or Cats? </h1>
+      <div className='radio-choice'>
+        <input type='radio' value='dog' name='animal-choice'/> Dogs!
+        <input type='radio' value='cat' name='animal-choice'/> Cats!
+      </div>
+    </main>
+  )
+}
 export default App;
