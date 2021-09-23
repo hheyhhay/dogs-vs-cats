@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCatData, fetchDogData } from './apiCalls';
 import { organizeCat, organizeDog } from './util';
+import Results from './Results'
 
 import './Game.css'
 
-const Game = () => {
+const Game = ( {animalChoice} ) => {
   const [catPicture, setCatPicture] =useState({});
   const [dogPicture, setDogPicture] = useState({});
   const [favoriteCats, setFavoriteCats] = useState([])
@@ -35,7 +36,7 @@ const Game = () => {
     }, [])
 
   const handleChange = (e) => {
-    console.log(e.target.className )
+
     if (e.target.className === 'cat-image'){
         setFavoriteCats([...favoriteCats, catPicture])
     } else {
@@ -48,12 +49,17 @@ const Game = () => {
   return (
     <div>
 
-    {catPicture && imageCount < 11 && <img src={catPicture.url} className='cat-image' onClick={(e) => handleChange(e)} />}
+    {catPicture && imageCount < 11 && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e)} />}
     <p>cats</p>
     <p>or</p>
-    {dogPicture && imageCount < 11 && <img src={dogPicture.url} className='dog-image' onClick={(e) => handleChange(e)} />}
+    {dogPicture && imageCount < 11 && <img src={dogPicture.url} alt={`Super cute picture of a ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e)} />}
     <p>dogs</p>
-    {imageCount.length === 11 && <div>GAME OVER</div>}
+    {imageCount === 11  && <Results
+                            favoriteDogs={favoriteDogs}
+                            favoriteCats={favoriteCats}
+                            animalChoice={ animalChoice }
+                            />
+                          }
     </div>
   )
 }
