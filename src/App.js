@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Game from './Game'
+import Results from './Results'
 
 import './App.css';
 
@@ -24,7 +25,9 @@ const App = () => {
       </div>
       <button onClick={(e) => onClick(e)}>Start Game</button>
       {!animalChoice && <div>Choice an Animal, please</div>}
-      {animalChoice && <Game />}
+      {animalChoice && <Game
+          animalChoice={animalChoice}
+          /> }
     </main>
   )
 }
