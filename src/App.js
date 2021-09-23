@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Game from './Game'
+import Results from './Results'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const [animalChoice, setAnimalChoice] = useState('');
 
+  const onChange = (e) => {
+    e.preventDefault()
+    setAnimalChoice(e.target.value)
+  }
+  const onClick = (e) => {
+    e.preventDefault()
+    console.log('startgame')
+  }
+
+  return (
+    <main className='App' onChange = {(e) => onChange(e)}>
+      <h1 className='header'> Do you like Dogs or Cats? </h1>
+      <div className='radio-choice'>
+        <input type='radio' value='dog' name='animal-choice'/> Dogs!
+        <input type='radio' value='cat' name='animal-choice'/> Cats!
+      </div>
+      <button onClick={(e) => onClick(e)}>Start Game</button>
+      {!animalChoice && <div>Choice an Animal, please</div>}
+      {animalChoice && <Game
+          animalChoice={animalChoice}
+          /> }
+    </main>
+  )
+}
 export default App;
