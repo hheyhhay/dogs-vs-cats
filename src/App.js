@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Game from './Game'
-import Results from './Results'
+import ReactDOM from 'react-dom';
+import Game from './Game';
+import Results from './Results';
+import { Route, Switch, Link } from 'react-router-dom';
 
 import './App.css';
 
@@ -19,16 +21,34 @@ const App = () => {
   return (
     <main className='App' onChange = {(e) => onChange(e)}>
       <h1 className='header'> Do you like Dogs or Cats? </h1>
-      <div className='radio-choice'>
-        <input type='radio' value='dog' name='animal-choice'/> Dogs!
-        <input type='radio' value='cat' name='animal-choice'/> Cats!
-      </div>
-      <button onClick={(e) => onClick(e)}>Start Game</button>
-      {!animalChoice && <div>Choice an Animal, please</div>}
-      {animalChoice && <Game
-          animalChoice={animalChoice}
-          /> }
+      <Switch>
+      <Route exact path='/'>
+        <div className='radio-choice'>
+          <input type='radio' value='dog' name='animal-choice'/> Dogs!
+          <input type='radio' value='cat' name='animal-choice'/> Cats!
+        </div>
+        <Link to={'/game'} >
+        {animalChoice &&  <button>Start Game</button> }
+        </Link>
+        {!animalChoice && <div>Choose an Animal, please</div>}
+      </Route>
+      <Route exact path='/game'>
+        <Game
+            animalChoice={animalChoice}
+            />
+      </Route>
+      <Route exact path='/results'>
+        <Results />
+      </Route>
+      </Switch>
+
+
     </main>
   )
 }
 export default App;
+
+
+// {animalChoice && <Game
+//     animalChoice={animalChoice}
+//     /> }
