@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Results.css'
 
@@ -48,7 +49,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
     <h1>{winnerText()}</h1>
     {winner === 'cat' && <div>{images}</div>}
     {winner === 'dog' && <div>{images}</div>}
-    <button>Try again </button>
+    <Link to={'/'}>
+      <button>Try again </button>
+    </Link>
     </div>
   )
 }

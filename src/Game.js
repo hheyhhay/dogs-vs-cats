@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchCatData, fetchDogData } from './apiCalls';
 import { organizeCat, organizeDog } from './util';
+import { Route, Link } from 'react-router-dom';
 import Results from './Results'
 
 import './Game.css'
@@ -49,19 +50,30 @@ const Game = ( {animalChoice} ) => {
   return (
     <div>
 
-    {catPicture && imageCount < 11 && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e)} />}
-    <p>cats</p>
-    <p>or</p>
-    {dogPicture && imageCount < 11 && <img src={dogPicture.url} alt={`Super cute picture of a ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e)} />}
-    <p>dogs</p>
-    {imageCount === 11  && <Results
+    {catPicture && imageCount < 3 && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e)} />}
+    {imageCount < 3 &&  <p>cats</p> && <p>or</p> }
+    {dogPicture && imageCount < 3 && <img src={dogPicture.url} alt={`Super cute picture of a ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e)} />}
+    {imageCount < 3 &&   <p>dogs</p> } 
+    { imageCount === 3 && <Results
                             favoriteDogs={favoriteDogs}
                             favoriteCats={favoriteCats}
                             animalChoice={ animalChoice }
                             />
-                          }
+    }
+
+
     </div>
   )
 }
 
 export default Game;
+
+// <Link to={'/results'}>
+//  <button>see your results</button>
+// </Link>
+
+// <Results
+//                       favoriteDogs={favoriteDogs}
+//                       favoriteCats={favoriteCats}
+//                       animalChoice={ animalChoice }
+//                       />
