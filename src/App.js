@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Game from './Game';
+import Favorites from './Favorites'
 import Results from './Results';
 import { Route, Switch, Link } from 'react-router-dom';
 import { fetchCatData, fetchDogData } from './apiCalls';
@@ -45,7 +46,7 @@ const App = () => {
 
     if (e.target.className === 'cat-image'){
         setFavoriteCats([...favoriteCats, image])
-    } else {
+    } else if (e.target.className === 'dog-image') {
       setFavoriteDogs([...favoriteDogs, image])
     }
     setImageCount(imageCount+1)
@@ -61,14 +62,23 @@ const App = () => {
     console.log('startgame')
   }
 
+    const clearFavorites = () => {
+      setFavoriteCats([]);
+      setFavoriteDogs([]);
+    }
+
   return (
     <main className='App' onChange = {(e) => onChange(e)}>
-      <h1 className='header'> Are you a dog person or a cat person? </h1>
+
 
       <Route exact path='/'>
+        <h1 className='header'> Are you a dog person or a cat person? </h1>
+        <h2 className='subheader'>Take the quiz to find out what you are! </h2>
         <div className='radio-choice'>
+          <a className='question'>Which do you find cutest?</a>
           <input type='radio' value='dog' name='animal-choice'/> Dogs!
           <input type='radio' value='cat' name='animal-choice'/> Cats!
+          <input type='radio' value='unknown' name='animal-choice' /> I love them both!
 
         <Link to={'/game'} >
         {animalChoice &&  <button>Start Game</button> }
@@ -90,6 +100,14 @@ const App = () => {
           animalChoice={animalChoice}
           favoriteCats={favoriteCats}
           favoriteDogs={favoriteDogs}
+          clearFavorites={clearFavorites}
+          />
+      </Route>
+      <Route exact path='/favorites'>
+        <Favorites
+          favoriteCats={favoriteCats}
+          favoriteDogs={favoriteDogs}
+          clearFavorites={clearFavorites}
           />
       </Route>
 

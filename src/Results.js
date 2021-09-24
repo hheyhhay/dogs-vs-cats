@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Results.css'
 
-const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
+const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
   const [images, setImages] = useState([]);
 
@@ -39,8 +39,10 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
     console.log('animalChoice', animalChoice)
     if (winner === animalChoice) {
       return <p>{`Incredible! You knew you were a ${animalChoice} person`} </p>
-    } else {
+    } else if (animalChoice !== 'unknown') {
       return <p>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`} </p>
+    } else {
+      return <p>{`You now know you are officially a ${winner} person`}</p>
     }
   }
 
@@ -51,7 +53,10 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
     {winner === 'cat' && <div>{images}</div>}
     {winner === 'dog' && <div>{images}</div>}
     <Link to={'/'}>
-      <button>Try again </button>
+      <button onClick={clearFavorites}>Try again </button>
+    </Link>
+    <Link to={'/favorites'} >
+      <button>See all your favorites</button>
     </Link>
     </div>
   )

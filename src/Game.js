@@ -20,6 +20,7 @@ const Game = ( {animalChoice, handleChange, catPicture, dogPicture, imageCount }
   //   getData()
   // }
 
+
   return (
     <div>
     {imageCount < 3 && <div className='quiz-container'>
