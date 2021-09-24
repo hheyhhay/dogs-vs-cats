@@ -1,10 +1,9 @@
 .App {
   text-align: center;
-  background-color: #fdc5f5;
   min-height: 100vw;
   min-width: 100vw;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Biryani', sans-serif;
   border: 2px solid #fdc5f5;
 }
@@ -16,7 +15,7 @@
   background: #ffffff;
   /* display: inline-block; */
   padding: 5% 0 5% 0;
-  margin: 55px 25% 30px 25%;
+  margin: 55px 10% 30px 10%;
   justify-content: center;
   /* text-align: center; */
   text-decoration: none;
@@ -43,15 +42,15 @@
   display: inline-block;
   margin: 0% auto 0% auto;
   display: block; */
-position: relative;
-/* padding-left: 35px; */
-margin-bottom: 12px;
-cursor: pointer;
-font-size: 12px;
-/* -webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none; */
+  position: relative;
+  /* padding-left: 35px; */
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
 }
 
 button {

@@ -90,7 +90,7 @@ const App = () => {
 
             <label className='container'>
               <input type='radio' value='unknown' name='animal-choice'/>
-              <span clasName = 'radio-button'></span> They are both so cute!
+              <span clasName = 'radio-button'></span> Both!
             </label>
           </div>
 
