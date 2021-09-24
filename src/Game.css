@@ -45,18 +45,13 @@
 }
 
 .cat-image {
-  /* margin-top: 5%;
-  width: 80%;
-  height: 60% */
   display: block;
   width: 250px;
   border: 1px solid black;
 }
 
 .dog-image {
-  /* margin-top: 5%;
-  width: 80%;
-  height: 60% */
+
   display: block;
   border: 1px solid black;
   width: 250px;
@@ -64,19 +59,41 @@
 
 .or-div {
   align-items: center;
+  padding-top: auto;
   border: 2px solid black;
   border-radius: 50%;
   width: 75px;
   height: 75px;
   background-color: white;
+  font-size: 20px;
 }
 
-.or-div:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
-  z-index: 10;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+@media screen and (min-width: 768px) {
+  .quiz-container {
+    flex-direction: row;
+  }
+  .poloriod-card {
+
+    margin-right: 40px;
+
+  }
+  .or-div {
+    align-items: center;
+    padding-top: auto;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    font-size: 20px;
+  }
+  .or-div:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
 }
