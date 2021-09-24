@@ -6,6 +6,7 @@
   margin: 0;
   font-size: 18px;
   font-family: 'Biryani', sans-serif;
+  border: 2px solid #fdc5f5;
 }
 
 .radio-choice {
