@@ -8,6 +8,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
   const [images, setImages] = useState([]);
 
   const findWinner = () => {
+
     if(favoriteCats.length > favoriteDogs.length ) {
 
       let cards = displayImages(favoriteCats)
@@ -51,6 +52,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
     {winner === 'dog' && <div>{images}</div>}
     <Link to={'/'}>
       <button>Try again </button>
+    </Link>
+    <Link to={'/favorites'} >
+      <button>See all your favorites</button>
     </Link>
     </div>
   )
