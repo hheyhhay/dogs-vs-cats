@@ -8,6 +8,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
   const [images, setImages] = useState([]);
 
   const findWinner = () => {
+
     if(favoriteCats.length > favoriteDogs.length ) {
 
       let cards = displayImages(favoriteCats)
