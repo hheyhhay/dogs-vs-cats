@@ -8,21 +8,9 @@ import './Game.css'
 
 const Game = ( {animalChoice, handleChange, catPicture, dogPicture, imageCount } ) => {
 
-
-  // const handleChange = (e) => {
-  //
-  //   if (e.target.className === 'cat-image'){
-  //       setFavoriteCats([...favoriteCats, catPicture])
-  //   } else {
-  //     setFavoriteDogs([...favoriteDogs, dogPicture])
-  //   }
-  //   setImageCount(imageCount+1)
-  //   getData()
-  // }
-
-
   return (
-    <div>
+    <div className='game-container'>
+      <h1>Who is cuter?</h1>
     {imageCount < 3 && <div className='quiz-container'>
       <div className='poloriod-card'>
         {catPicture && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e, catPicture)} />}
