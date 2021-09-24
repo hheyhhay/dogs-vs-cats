@@ -65,6 +65,7 @@ const App = () => {
     const clearFavorites = () => {
       setFavoriteCats([]);
       setFavoriteDogs([]);
+      setImageCount(0)
     }
 
   return (
@@ -76,9 +77,22 @@ const App = () => {
         <h2 className='subheader'>Take the quiz to find out what you are! </h2>
         <div className='radio-choice'>
           <a className='question'>Which do you find cutest?</a>
-          <input type='radio' value='dog' name='animal-choice'/> Dogs!
-          <input type='radio' value='cat' name='animal-choice'/> Cats!
-          <input type='radio' value='unknown' name='animal-choice' /> I love them both!
+          <div className='radio-container'>
+            <label className='container'>
+              <input type='radio' value='dog' name='animal-choice'/>
+              <span clasName = 'radio-button'></span> Dogs!
+            </label>
+
+            <label className='container'>
+              <input type='radio' value='cat' name='animal-choice'/>
+              <span clasName = 'radio-button'></span> Cats!
+            </label>
+
+            <label className='container'>
+              <input type='radio' value='unknown' name='animal-choice'/>
+              <span clasName = 'radio-button'></span> They are both so cute!
+            </label>
+          </div>
 
         <Link to={'/game'} >
         {animalChoice &&  <button>Start Game</button> }
