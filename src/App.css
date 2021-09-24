@@ -13,11 +13,9 @@
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  /* display: inline-block; */
   padding: 5% 0 5% 0;
   margin: 55px 10% 30px 10%;
   justify-content: center;
-  /* text-align: center; */
   text-decoration: none;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
@@ -37,20 +35,11 @@
     text-align: left;
 }
 .container {
-  /* text-align: left;
-  border: 2px solid black;
-  display: inline-block;
-  margin: 0% auto 0% auto;
-  display: block; */
   position: relative;
-  /* padding-left: 35px; */
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 12px;
-  /* -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
+
 }
 
 button {
@@ -65,4 +54,5 @@ button {
    font-size: 12px;
    width: 100%;
    align-items: right;
+   background-color: white;
 }
