@@ -1,0 +1,52 @@
+.results-container {
+  border: 2px solid blue;
+}
+
+.winning-images {
+  border: 2px solid green;
+  display: flex;
+  /* overflow: scroll; */
+
+}
+
+.image {
+  background: #ffffff;
+  display: inline-block;
+  margin: 3%;
+  padding: 15px 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 0;
+  position: relative;
+}
+
+.cat-image {
+  /* margin-top: 5%;
+  width: 80%;
+  height: 60% */
+  display: block;
+width: 100px;
+border: 1px solid black;
+}
+
+.dog-image {
+  /* margin-top: 5%;
+  width: 80%;
+  height: 60% */
+  display: block;
+  border: 1px solid black;
+  width: 100px;
+}
+
+.result-button {
+  width: 20%;
+  margin: 3% auto 3% auto;
+
+
+}

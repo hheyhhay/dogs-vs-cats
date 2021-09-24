@@ -29,7 +29,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
 
     let imageCards = images.map(image => {
       return (
-        <img src={image.url} alt={`Super cute picture of a ${image.type}`}className={`${image.type}-image`} />
+        <div className='image'>
+          <img src={image.url} alt={`Super cute picture of a ${image.type}`}className={`${image.type}-image`} />
+        </div>
         )
       })
     return imageCards;
@@ -38,7 +40,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
   const winnerText = () => {
     console.log('animalChoice', animalChoice)
     if (winner === animalChoice) {
-      return <p>{`Incredible! You knew you were a ${animalChoice} person`} </p>
+      return (
+        <p>{`Incredible! You knew you were a ${animalChoice} person`} </p>
+      )
     } else if (animalChoice !== 'unknown') {
       return <p>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`} </p>
     } else {
@@ -48,15 +52,15 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
 
 
   return (
-    <div>
+    <div className='results-container'>
     <h1>{winnerText()}</h1>
-    {winner === 'cat' && <div>{images}</div>}
-    {winner === 'dog' && <div>{images}</div>}
+    {winner === 'cat' && <div className='winning-images'>{images}</div>}
+    {winner === 'dog' && <div className='winning-images'>{images}</div>}
     <Link to={'/'}>
-      <button onClick={clearFavorites}>Try again </button>
+      <button className='result-button' onClick={clearFavorites}>Try again </button>
     </Link>
     <Link to={'/favorites'} >
-      <button>See all your favorites</button>
+      <button className='result-button' >See all your favorites</button>
     </Link>
     </div>
   )
