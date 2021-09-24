@@ -53,6 +53,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice }) => {
     <Link to={'/'}>
       <button>Try again </button>
     </Link>
+    <Link to={'/favorites'} >
+      <button>See all your favorites</button>
+    </Link>
     </div>
   )
 }
