@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Game from './Game';
 import Results from './Results';
+import Favorites from './Favorites';
 import { Route, Switch, Link } from 'react-router-dom';
 import { fetchCatData, fetchDogData } from './apiCalls';
 import { organizeCat, organizeDog } from './util';
@@ -91,6 +92,12 @@ const App = () => {
           favoriteCats={favoriteCats}
           favoriteDogs={favoriteDogs}
           />
+      </Route>
+      <Route exact path='/favorites'>
+        <Favorites
+          favoriteCats={favoriteCats}
+          favoriteDogs={favoriteDogs}
+        />
       </Route>
 
 
