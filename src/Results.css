@@ -1,17 +1,26 @@
 .results-container {
   border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
 }
 
 .winning-images {
-  border: 2px solid green;
+  border: 2px solid red;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+
   /* overflow: scroll; */
 
 }
 
 .image {
   background: #ffffff;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 3%;
   padding: 15px 15px 40px;
   text-align: center;
@@ -31,8 +40,8 @@
   width: 80%;
   height: 60% */
   display: block;
-width: 100px;
-border: 1px solid black;
+  width: 5%;
+  border: 1px solid black;
 }
 
 .dog-image {
@@ -41,12 +50,10 @@ border: 1px solid black;
   height: 60% */
   display: block;
   border: 1px solid black;
-  width: 100px;
+  width: 50%;
 }
 
 .result-button {
   width: 20%;
   margin: 3% auto 3% auto;
-
-
 }
