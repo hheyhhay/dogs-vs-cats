@@ -1,1 +1,1 @@
-[deployed site](whodoyoulove.surge.sh)
+see deployed site here: whodoyoulove.surge.sh
