@@ -51,7 +51,6 @@
 }
 
 .dog-image {
-
   display: block;
   border: 1px solid black;
   width: 250px;
@@ -73,20 +72,9 @@
     flex-direction: row;
   }
   .poloriod-card {
-
-    margin-right: 40px;
-
+    margin: auto;
   }
-  .or-div {
-    align-items: center;
-    padding-top: auto;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    background-color: white;
-    font-size: 20px;
-  }
+
   .or-div:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);

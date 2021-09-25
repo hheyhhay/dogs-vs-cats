@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import Game from './Game';
 import Favorites from './Favorites'
 import Results from './Results';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { fetchCatData, fetchDogData } from './apiCalls';
 import { organizeCat, organizeDog } from './util';
 
@@ -15,7 +15,6 @@ const App = () => {
   const [favoriteDogs, setFavoriteDogs] = useState([]);
   const [catPicture, setCatPicture] =useState({});
   const [dogPicture, setDogPicture] = useState({});
-   // move to App -> make result a sibling
 
   const [imageCount,  setImageCount] = useState(0);
   const [error, setError] = useState('')
@@ -54,12 +53,7 @@ const App = () => {
   }
 
   const onChange = (e) => {
-    // e.preventDefault()
     setAnimalChoice(e.target.value)
-  }
-  const onClick = (e) => {
-    e.preventDefault()
-    console.log('startgame')
   }
 
     const clearFavorites = () => {
@@ -76,28 +70,28 @@ const App = () => {
         <h1 className='header'> Are you a dog person or a cat person? </h1>
         <h2 className='subheader'>Take the quiz to find out what you are! </h2>
         <div className='radio-choice'>
-          <a className='question'>Which do you find cutest?</a>
+          <p className='question'>Which do you find cutest?</p>
           <div className='radio-container'>
             <label className='container'>
               <input type='radio' value='dog' name='animal-choice'/>
-              <span clasName = 'radio-button'></span> Dogs!
+              <span className = 'radio-button'></span> Dogs!
             </label>
 
             <label className='container'>
               <input type='radio' value='cat' name='animal-choice'/>
-              <span clasName = 'radio-button'></span> Cats!
+              <span className = 'radio-button'></span> Cats!
             </label>
 
             <label className='container'>
               <input type='radio' value='unknown' name='animal-choice'/>
-              <span clasName = 'radio-button'></span> Both!
+              <span className = 'radio-button'></span> Both!
             </label>
           </div>
 
         <Link to={'/game'} >
-        {animalChoice &&  <button>Start Game</button> }
+          {animalChoice &&  <button>Start Game</button> }
         </Link>
-        {!animalChoice && <div>Choose an Animal, please</div>}
+
         </div>
       </Route>
       <Route exact path='/game'>
@@ -124,14 +118,7 @@ const App = () => {
           clearFavorites={clearFavorites}
           />
       </Route>
-
-
     </main>
   )
 }
 export default App;
-
-
-// {animalChoice && <Game
-//     animalChoice={animalChoice}
-//     /> }

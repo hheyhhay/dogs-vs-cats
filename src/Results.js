@@ -6,7 +6,7 @@ import './Results.css'
 const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
   const [images, setImages] = useState([]);
-
+  
   const findWinner = () => {
 
     if(favoriteCats.length > favoriteDogs.length ) {
@@ -49,7 +49,6 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
       return <p>{`You now know you are officially a ${winner} person`}</p>
     }
   }
-
 
   return (
     <div className='results-container'>

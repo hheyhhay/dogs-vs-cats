@@ -29,18 +29,6 @@
   position: relative;
 }
 
-.cat-image {
-  display: block;
-  width: 5%;
-  border: 1px solid black;
-}
-
-.dog-image {
-  display: block;
-  border: 1px solid black;
-  width: 50%;
-}
-
 .result-button {
   width: 50%;
   margin: 3% auto 3% auto;
