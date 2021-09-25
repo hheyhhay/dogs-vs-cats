@@ -61,6 +61,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     <Link to={'/favorites'} >
       <button className='result-button' >See all your favorites</button>
     </Link>
+    <Link to={'/favorites'} >
+      <button>See all your favorites</button>
+    </Link>
     </div>
   )
 }

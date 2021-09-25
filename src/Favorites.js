@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Favorites.css'
@@ -9,6 +10,7 @@ const Favorites = ({favoriteCats, favoriteDogs, clearFavorites }) => {
       <div className='image'>
         <img src={image.url} alt={`Super cute picture of a ${image.type}`}className={`${image.type}-image`} />
       </div>
+
     )
   })
   return (
