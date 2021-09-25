@@ -1,0 +1,39 @@
+.favorite-section {
+  display: flex;
+  flex-direction: column;
+}
+.favorite-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.image {
+  background: #ffffff;
+  margin: 2%;
+  padding: 15px 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -webkit-transition: all .20s linear;
+  -moz-transition: all .20s linear;
+  transition: all .20s linear;
+  z-index: 0;
+  position: relative;
+}
+.cat-image {
+  display: block;
+  width: 250px;
+  border: 1px solid black;
+}
+
+.dog-image {
+
+  display: block;
+  border: 1px solid black;
+  width: 250px;
+}

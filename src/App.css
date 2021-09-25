@@ -1,21 +1,21 @@
 .App {
   text-align: center;
-  background-color: #fdc5f5;
   min-height: 100vw;
   min-width: 100vw;
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Biryani', sans-serif;
+  border: 2px solid #fdc5f5;
 }
 
 .radio-choice {
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
   background: #ffffff;
-  display: inline-block;
-  margin: 55px 75px 30px;
-  padding: 15px 15px 40px;
-  text-align: center;
+  padding: 5% 0 5% 0;
+  margin: 55px 10% 30px 10%;
+  justify-content: center;
   text-decoration: none;
   -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
   -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
@@ -27,11 +27,32 @@
   position: relative;
 }
 
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 0%;
+    text-align: left;
+}
+.container {
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+
+}
+
 button {
   display: block;
-  margin: 10%;
+  margin-left: 60%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   line-height: 24px;
    padding: 0 20px;
    border: 1px solid rgba(0,0,0,1);
    box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px rgba(0,0,0,1);
+   font-size: 12px;
+   width: 100%;
+   align-items: right;
+   background-color: white;
 }
