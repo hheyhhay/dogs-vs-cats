@@ -52,7 +52,9 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
 
   return (
     <div className='results-container'>
-    <h1>{winnerText()}</h1>
+    <div className='header-container'>
+      <h1>{winnerText()}</h1>
+    </div>
     {winner === 'cat' && <div className='winning-images'>{images}</div>}
     {winner === 'dog' && <div className='winning-images'>{images}</div>}
     <Link to={'/'}>

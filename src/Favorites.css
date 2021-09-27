@@ -10,35 +10,28 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  border: 2px solid black;
-
 }
-
-.image {
-  margin: 0;
-}
-
 
 .image:nth-child(1n) {
-  border: 2px solid purple;
   margin: 0;
   -webkit-transform:rotate(30deg) scale(0.7,0.7);
   -moz-transform:rotate(30deg) scale(0.7,0.7);
   transform:rotate(30deg) scale(0.7,0.7);
   top:0%;
-  left:0%;
+  left:-10%;
+
 }
 .image:nth-child(2n) {
-  margin: 0;
-  border: 5px solid pink;
+  margin: -25%;
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
   -moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);
-  bottom: 40%;
-  left:0%;
+  bottom: -50%;
+  left:10%;
+  z-index: 100;
+
 }
 .image:nth-child(3n) {
-  margin: 0;
-  border: 5px solid red;
+  margin: 0%;
   -webkit-transform:rotate(40deg) scale(0.7,0.7);
   -moz-transform:rotate(40deg) scale(0.7,0.7);
   transform:rotate(40deg) scale(0.7,0.7);
@@ -46,7 +39,7 @@
   left:-10%;
 }
 .image:nth-child(4n) {
-  margin: 0;
+  margin-top: -25%;
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
   -moz-transform:rotate(-30deg) scale(0.7,0.7);
   transform:rotate(-30deg) scale(0.7,0.7);
@@ -55,7 +48,6 @@
 }
 .image:nth-child(5n) {
   margin: 0;
-  border: 5px solid yellow;
   -webkit-transform:rotate(-20deg) scale(0.8,0.8);
   -moz-transform:rotate(-20deg) scale(0.8,0.8);
   transform:rotate(-20deg) scale(0.8,0.8);
@@ -65,7 +57,6 @@
 }
 .image:nth-child(6n) {
   margin: 0;
-  border: 10px solid green;
   -webkit-transform:rotate(30deg) scale(0.7,0.7);
   -moz-transform:rotate(30deg) scale(0.7,0.7);
   transform:rotate(30deg) scale(0.7,0.7);
@@ -73,12 +64,13 @@
   right:55%;
 }
 .image:nth-child(7n) {
-  margin: 0;
+
   -webkit-transform:rotate(10deg) scale(0.7,0.7);
   -moz-transform:rotate(10deg) scale(0.7,0.7);
   transform:rotate(10deg) scale(0.7,0.7);
   top:0%;
   right:25%;
+  margin: -25%;
 }
 .image:hover {
   z-index:100;
@@ -89,7 +81,6 @@
 
 @media screen and (min-width: 768px) {
   .image:nth-child(1n) {
-    border: 2px solid purple;
     margin: 0;
     -webkit-transform:rotate(30deg) scale(0.7,0.7);
     -moz-transform:rotate(30deg) scale(0.7,0.7);
@@ -98,8 +89,7 @@
     left:0%;
   }
   .image:nth-child(2n) {
-    margin: 0;
-    border: 5px solid pink;
+    margin: -10%;
     -webkit-transform:rotate(-30deg) scale(0.7,0.7);
     -moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);
     top:40%;
@@ -114,7 +104,7 @@
     left:-10%;
   }
   .image:nth-child(4n) {
-    margin: 0;
+    margin: -15%;
     -webkit-transform:rotate(-30deg) scale(0.7,0.7);
     -moz-transform:rotate(-30deg) scale(0.7,0.7);
     transform:rotate(-30deg) scale(0.7,0.7);
@@ -123,7 +113,6 @@
   }
   .image:nth-child(5n) {
     margin: 0;
-    border: 5px solid red;
     -webkit-transform:rotate(-20deg) scale(0.8,0.8);
     -moz-transform:rotate(-20deg) scale(0.8,0.8);
     transform:rotate(-20deg) scale(0.8,0.8);
@@ -133,7 +122,6 @@
   }
   .image:nth-child(6n) {
     margin: 0;
-    border: 10px solid green;
     -webkit-transform:rotate(30deg) scale(0.7,0.7);
     -moz-transform:rotate(30deg) scale(0.7,0.7);
     transform:rotate(30deg) scale(0.7,0.7);
@@ -141,8 +129,7 @@
     left:-30%;
   }
   .image:nth-child(7n) {
-    margin: 0;
-    border: 4px solid grey;
+    margin: -15%;
     -webkit-transform:rotate(10deg) scale(0.7,0.7);
     -moz-transform:rotate(10deg) scale(0.7,0.7);
     transform:rotate(10deg) scale(0.7,0.7);
@@ -161,7 +148,5 @@
   .favorite-container {
     margin: auto;
     max-width: 80%;
-    border: 2px solid black;
-
   }
 }
