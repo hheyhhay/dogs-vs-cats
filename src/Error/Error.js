@@ -1,7 +1,6 @@
 import React from 'react';
-import './Error.css'
-import errorImage from './error-image.jpg'
-import { Link } from 'react-router-dom';
+import './Error.css';
+import errorImage from './error-image.jpg';
 
 const Error = ( { error }) => {
   return(

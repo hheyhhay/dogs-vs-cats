@@ -30,7 +30,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     let imageCards = images.map(image => {
       return (
         <div className='image'>
-          <img src={image.url} alt={`Super cute picture of a ${image.type}`}className={`${image.type}-image`} />
+          <img src={image.url} alt={`Super cute ${image.type}`}className={`${image.type}-image`} />
         </div>
         )
       })

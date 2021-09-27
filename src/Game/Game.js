@@ -11,13 +11,13 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
       </div>
       {imageCount < 7 && <div className='quiz-container'>
       <div className='poloriod-card'>
-        {catPicture && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e, catPicture)} />}
+        {catPicture && <img src={catPicture.url} alt={`Super cute ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e, catPicture)} />}
       </div>
       <div className='or-div'>
         <p>or</p>
       </div>
       <div className='poloriod-card dog'>
-        {dogPicture && <img src={dogPicture.url} alt={`Super cute picture of a ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e, dogPicture)} />}
+        {dogPicture && <img src={dogPicture.url} alt={`Super cute ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e, dogPicture)} />}
       </div>
     </div>}
     { imageCount === 7 && <Redirect to='/results'
