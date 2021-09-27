@@ -58,6 +58,8 @@ const App = () => {
   }
 
     const clearFavorites = () => {
+
+      setAnimalChoice('')
       setFavoriteCats([]);
       setFavoriteDogs([]);
       setImageCount(0)
