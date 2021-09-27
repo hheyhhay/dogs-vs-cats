@@ -6,7 +6,9 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
 
   return (
     <div className='game-container'>
-      <h1>Who is cuter?</h1>
+      <div className='header-container'>
+        <h1>Who is cuter?</h1>
+      </div>
       {imageCount < 7 && <div className='quiz-container'>
       <div className='poloriod-card'>
         {catPicture && <img src={catPicture.url} alt={`Super cute picture of a ${catPicture.type}`} className='cat-image' onClick={(e) => handleChange(e, catPicture)} />}

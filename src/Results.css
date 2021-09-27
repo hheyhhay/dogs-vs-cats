@@ -3,7 +3,10 @@
   flex-direction: column;
   height: 100%;
   padding: 0;
+}
 
+h1 {
+  font-size: 18px;
 }
 
 .winning-images {
@@ -11,7 +14,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  border: 2px solid green;
 }
 
 .image {
@@ -32,11 +34,17 @@
   width: 50%;
   margin: 3% auto 3% auto;
   background-color: white;
+  z-index: 100;
+}
+
+.restart {
+  margin-top: 20%;
 }
 
 @media screen and (min-width: 768px) {
   .result-button {
     width: 20%;
+    margin: 1% auto 1% auto;
   }
   .winning-images {
     margin: auto;
