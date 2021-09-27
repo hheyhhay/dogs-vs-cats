@@ -4,6 +4,7 @@ import Game from './Game';
 import Favorites from './Favorites'
 import Results from './Results';
 import { Route, Link } from 'react-router-dom';
+
 import { fetchCatData, fetchDogData } from './apiCalls';
 import { organizeCat, organizeDog } from './util';
 
@@ -117,6 +118,12 @@ const App = () => {
           favoriteDogs={favoriteDogs}
           clearFavorites={clearFavorites}
           />
+      </Route>
+      <Route exact path='/favorites'>
+        <Favorites
+          favoriteCats={favoriteCats}
+          favoriteDogs={favoriteDogs}
+        />
       </Route>
     </main>
   )
