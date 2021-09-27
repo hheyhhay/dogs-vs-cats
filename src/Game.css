@@ -22,6 +22,22 @@
   transition: all .20s linear;
   z-index: 0;
   position: relative;
+  border: 2px solid purple;
+  margin: 0;
+  -webkit-transform:rotate(30deg) scale(0.7,0.7);
+  -moz-transform:rotate(30deg) scale(0.7,0.7);
+  transform:rotate(30deg) scale(0.7,0.7);
+  top:0%;
+  left:0%;
+}
+
+.dog {
+  margin: 0;
+  border: 5px solid pink;
+  -webkit-transform:rotate(-30deg) scale(0.7,0.7);
+  -moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);
+  bottom: 40%;
+  left:0%;
 }
 
 .cat-image {
@@ -30,6 +46,7 @@
   height: 250px;
   object-fit: cover;
   border: 1px solid black;
+
 }
 
 .dog-image {

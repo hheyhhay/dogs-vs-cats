@@ -14,7 +14,7 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
       <div className='or-div'>
         <p>or</p>
       </div>
-      <div className='poloriod-card'>
+      <div className='poloriod-card dog'>
         {dogPicture && <img src={dogPicture.url} alt={`Super cute picture of a ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e, dogPicture)} />}
       </div>
     </div>}
