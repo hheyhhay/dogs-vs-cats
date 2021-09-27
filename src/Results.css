@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100%;
   padding: 0;
+
 }
 
 .winning-images {
@@ -10,12 +11,11 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
+  border: 2px solid green;
 }
 
 .image {
   background: #ffffff;
-  margin: 3%;
   padding: 15px 15px 40px;
   text-align: center;
   text-decoration: none;
@@ -25,7 +25,6 @@
   -webkit-transition: all .20s linear;
   -moz-transition: all .20s linear;
   transition: all .20s linear;
-  z-index: 0;
   position: relative;
 }
 
@@ -38,5 +37,10 @@
 @media screen and (min-width: 768px) {
   .result-button {
     width: 20%;
+  }
+  .winning-images {
+    margin: auto;
+    max-width: 80%;
+
   }
 }

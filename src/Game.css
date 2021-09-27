@@ -22,38 +22,39 @@
   transition: all .20s linear;
   z-index: 0;
   position: relative;
+  border: 2px solid purple;
+  margin: 0;
+  -webkit-transform:rotate(30deg) scale(0.7,0.7);
+  -moz-transform:rotate(30deg) scale(0.7,0.7);
+  transform:rotate(30deg) scale(0.7,0.7);
+  top:0%;
+  left:0%;
 }
 
-.poloriod-card:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
-  z-index: 10;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  cursor: pointer;
-
-}
-
-.polaroid:after {
-  color: #333;
-  font-size: 25px;
-  content: attr(title);
-  position: relative;
-  top: 15px;
+.dog {
+  margin: 0;
+  border: 5px solid pink;
+  -webkit-transform:rotate(-30deg) scale(0.7,0.7);
+  -moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);
+  bottom: 40%;
+  left:0%;
 }
 
 .cat-image {
   display: block;
   width: 250px;
+  height: 250px;
+  object-fit: cover;
   border: 1px solid black;
+
 }
 
 .dog-image {
   display: block;
-  border: 1px solid black;
   width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid black;
 }
 
 .or-div {
@@ -73,6 +74,24 @@
   }
   .poloriod-card {
     margin: auto;
+  }
+  .poloriod-card:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    cursor: pointer;
+  }
+
+  .polaroid:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
   }
 
   .or-div:hover {
