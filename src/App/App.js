@@ -23,15 +23,16 @@ const App = () => {
 
   const getData = async () => {
     try {
-      const catData = await fetchCatData()
-      const simpleCatData = organizeCat(catData)
+      fetchCatData().then((catData) => {
+        const simpleCatData = organizeCat(catData);
+        setCatPicture(simpleCatData)
+      })
 
-      setCatPicture(simpleCatData)
+      fetchDogData().then((dogData) => {
+        const simpleDogData = organizeDog(dogData);
+        setDogPicture(simpleDogData)
+      })
 
-      const dogData = await fetchDogData()
-      const simpleDogData = organizeDog(dogData)
-
-      setDogPicture(simpleDogData)
     }
     catch(error)
     {
