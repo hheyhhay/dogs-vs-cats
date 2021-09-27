@@ -38,15 +38,15 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
   }
 
   const winnerText = () => {
-    console.log('animalChoice', animalChoice)
+
     if (winner === animalChoice) {
       return (
-        <p>{`Incredible! You knew you were a ${animalChoice} person`} </p>
+        <p className='result-statement'>{`Incredible! You knew you were a ${animalChoice} person`}</p>
       )
     } else if (animalChoice !== 'unknown') {
-      return <p>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`} </p>
+      return <p className='result-statement'>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`}</p>
     } else {
-      return <p>{`You now know you are officially a ${winner} person`}</p>
+      return <p className='result-statement'>{`You now know you are officially a ${winner} person`}</p>
     }
   }
 
@@ -56,10 +56,10 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     {winner === 'cat' && <div className='winning-images'>{images}</div>}
     {winner === 'dog' && <div className='winning-images'>{images}</div>}
     <Link to={'/'}>
-      <button className='result-button' onClick={clearFavorites}>Try again </button>
+      <button className='result-button restart' onClick={clearFavorites}>Try again </button>
     </Link>
     <Link to={'/favorites'} >
-      <button className='result-button' >See all your favorites</button>
+      <button className='result-button favorite-button' >See all your favorites</button>
     </Link>
     </div>
   )

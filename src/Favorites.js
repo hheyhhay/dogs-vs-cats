@@ -18,7 +18,10 @@ const Favorites = ({favoriteCats, favoriteDogs, clearFavorites }) => {
     <h1>You picked some really cute pictures</h1>
       <div className='favorite-container'>{favoriteCards}</div>
       <Link to={'/'}>
-        <button className='result-button' onClick={clearFavorites}>Take Test </button>
+        <button className='result-button restart' onClick={clearFavorites}>Take Test </button>
+      </Link>
+      <Link to={'/results'}>
+        <button className='result-button return-results'>Return to results</button>
       </Link>
     </div>
   )
