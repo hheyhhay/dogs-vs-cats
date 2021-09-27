@@ -3,19 +3,21 @@
   flex-direction: column;
   height: 100%;
   padding: 0;
+
 }
 
 .winning-images {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   max-width: 100%;
+  border: 2px solid green;
 }
 
 .image {
   background: #ffffff;
-  margin: 3%;
+  /* margin: 3%; */
   padding: 15px 15px 40px;
   text-align: center;
   text-decoration: none;

@@ -24,20 +24,20 @@
   position: relative;
 }
 
-
-
 .cat-image {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border: 1px solid black;
 }
 
 .dog-image {
   display: block;
-  border: 1px solid black;
   width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid black;
 }
 
 .or-div {
