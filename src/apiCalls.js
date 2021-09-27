@@ -2,8 +2,10 @@ export const fetchCatData = async () => {
 
   let response = await fetch('https://api.thecatapi.com/v1/images/search')
 
-  if (!response.ok) {
-    throw new Error('Sorry, we\'re having a hard time finding cats')
+  if (response.status === 400) {
+    throw new Error('404 error - Destination not found')
+  } else if (response.status === 500) {
+    throw new Error('500 error - Can\'t access pictures right now')
   }
   let cats = await response.json();
 
@@ -14,9 +16,12 @@ export const fetchDogData = async () => {
 
   let response = await fetch('https://dog.ceo/api/breeds/image/random')
 
-  if (!response.ok) {
-    throw new Error('Sorry, we\'re having a hard time finding dogs')
+  if (response.status === 400) {
+    throw new Error('404 error - Destination not found')
+  } else if (response.status === 500) {
+    throw new Error('500 error - Can\'t access pictures right now')
   }
+
   let dogs = await response.json();
 
   return dogs
