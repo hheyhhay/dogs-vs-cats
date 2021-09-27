@@ -22,11 +22,11 @@
 
 }
 .image:nth-child(2n) {
-  margin: -25%;
+  margin: -15%;
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
   -moz-transform:rotate(-30deg) scale(0.7,0.7);transform:rotate(-30deg) scale(0.7,0.7);
   bottom: -50%;
-  left:10%;
+  left:8%;
   z-index: 100;
 
 }
