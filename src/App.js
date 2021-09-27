@@ -119,12 +119,6 @@ const App = () => {
           clearFavorites={clearFavorites}
           />
       </Route>
-      <Route exact path='/favorites'>
-        <Favorites
-          favoriteCats={favoriteCats}
-          favoriteDogs={favoriteDogs}
-        />
-      </Route>
     </main>
   )
 }
