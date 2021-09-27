@@ -24,29 +24,13 @@
   position: relative;
 }
 
-.poloriod-card:hover {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  transform: scale(1.2);
-  z-index: 10;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
-  cursor: pointer;
 
-}
-
-.polaroid:after {
-  color: #333;
-  font-size: 25px;
-  content: attr(title);
-  position: relative;
-  top: 15px;
-}
 
 .cat-image {
   display: block;
-  width: 250px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border: 1px solid black;
 }
 
@@ -73,6 +57,24 @@
   }
   .poloriod-card {
     margin: auto;
+  }
+  .poloriod-card:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 10;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    cursor: pointer;
+  }
+
+  .polaroid:after {
+    color: #333;
+    font-size: 25px;
+    content: attr(title);
+    position: relative;
+    top: 15px;
   }
 
   .or-div:hover {
