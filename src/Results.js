@@ -6,7 +6,7 @@ import './Results.css'
 const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
   const [images, setImages] = useState([]);
-  
+
   const findWinner = () => {
 
     if(favoriteCats.length > favoriteDogs.length ) {
@@ -60,9 +60,6 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     </Link>
     <Link to={'/favorites'} >
       <button className='result-button' >See all your favorites</button>
-    </Link>
-    <Link to={'/favorites'} >
-      <button>See all your favorites</button>
     </Link>
     </div>
   )
