@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 // import ReactDOM from 'react-dom';
-import Game from './Game';
-import Favorites from './Favorites'
-import Results from './Results';
-import Error from './Error'
+import Game from '../Game/Game';
+import Favorites from '../Favorites/Favorites'
+import Results from '../Results/Results';
+import Error from '../Error/Error';
 import { Route, Link, Redirect } from 'react-router-dom';
 
-import { fetchCatData, fetchDogData } from './apiCalls';
-import { organizeCat, organizeDog } from './util';
+import { fetchCatData, fetchDogData } from '../apiCalls';
+import { organizeCat, organizeDog } from '../util';
 
 import './App.css';
 
