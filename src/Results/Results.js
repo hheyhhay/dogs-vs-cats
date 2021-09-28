@@ -32,7 +32,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     let imageCards = images.map(image => {
       return (
         <div className='image' key={image.id}>
-          <img src={image.url} alt={`Super cute ${image.type}`}className={`${image.type}-image`} />
+          <img src={image.url} alt={`Super cute ${image.type}`} className={`${image.type}-image`} />
         </div>
         )
       })
@@ -46,7 +46,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
         <p className='result-statement'>{`Incredible! You knew you were a ${animalChoice} person`}</p>
       )
     } else if (animalChoice !== 'unknown') {
-      return <p className='result-statement'>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`}</p>
+      return <p className='result-statement'>{`You are not a ${animalChoice} person, but a ${winner} person`}</p>
     } else {
       return <p className='result-statement'>{`You now know you are officially a ${winner} person`}</p>
     }
