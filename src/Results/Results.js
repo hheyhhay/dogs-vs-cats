@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Results.css'
+import './Results.css';
 
 const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
@@ -20,17 +20,19 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
       setWinner('dog')
     }
   }
-
+  //eslint-disable-next-line
   useEffect(() => {
     findWinner()
+
+  //eslint-disable-next-line
   }, [])
 
   const displayImages = (images) => {
 
     let imageCards = images.map(image => {
       return (
-        <div className='image'>
-          <img src={image.url} alt={`Super cute picture of a ${image.type}`}className={`${image.type}-image`} />
+        <div className='image' key={image.id}>
+          <img src={image.url} alt={`Super cute ${image.type}`} className={`${image.type}-image`} />
         </div>
         )
       })
@@ -44,7 +46,7 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
         <p className='result-statement'>{`Incredible! You knew you were a ${animalChoice} person`}</p>
       )
     } else if (animalChoice !== 'unknown') {
-      return <p className='result-statement'>{`Opps! You are achually not a ${animalChoice} person, but a ${winner} person`}</p>
+      return <p className='result-statement'>{`You are not a ${animalChoice} person, but a ${winner} person`}</p>
     } else {
       return <p className='result-statement'>{`You now know you are officially a ${winner} person`}</p>
     }
@@ -65,6 +67,6 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     </Link>
     </div>
   )
-}
+};
 
 export default Results;

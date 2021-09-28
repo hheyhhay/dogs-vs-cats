@@ -10,7 +10,7 @@ export const fetchCatData = async () => {
   let cats = await response.json();
 
   return cats
-}
+};
 
 export const fetchDogData = async () => {
 
@@ -25,4 +25,4 @@ export const fetchDogData = async () => {
   let dogs = await response.json();
 
   return dogs
-}
+};
