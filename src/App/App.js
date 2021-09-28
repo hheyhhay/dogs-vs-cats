@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import ReactDOM from 'react-dom';
 import Game from '../Game/Game';
-import Favorites from '../Favorites/Favorites'
+import Favorites from '../Favorites/Favorites';
 import Results from '../Results/Results';
 import Error from '../Error/Error';
 import { Route, Link, Redirect } from 'react-router-dom';
@@ -19,26 +18,26 @@ const App = () => {
   const [dogPicture, setDogPicture] = useState({});
 
   const [imageCount,  setImageCount] = useState(0);
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
 
   const getData = async () => {
     try {
       fetchCatData().then((catData) => {
         const simpleCatData = organizeCat(catData);
-        setCatPicture(simpleCatData)
+        setCatPicture(simpleCatData);
       })
 
       fetchDogData().then((dogData) => {
         const simpleDogData = organizeDog(dogData);
-        setDogPicture(simpleDogData)
+        setDogPicture(simpleDogData);
       })
 
     }
     catch(error)
     {
-      setError(error.message)
+      setError(error.message);
     }
-  }
+  };
 
   useEffect(() => {
     getData();
@@ -59,23 +58,21 @@ const App = () => {
     setAnimalChoice(e.target.value)
   }
 
-    const clearFavorites = () => {
-
-      setAnimalChoice('')
-      setFavoriteCats([]);
-      setFavoriteDogs([]);
-      setImageCount(0)
+  const clearFavorites = () => {
+    setAnimalChoice('')
+    setFavoriteCats([]);
+    setFavoriteDogs([]);
+    setImageCount(0)
     }
 
   return (
     <main className='App' onChange = {(e) => onChange(e)}>
-
-    {error &&  <Redirect to='/error' />}
+      {error &&  <Redirect to='/error' />}
       <Route exact path='/'>
-      <div className='header-container'>
-        <h1 className='header'> Are you a dog person or a cat person? </h1>
-        <h2 className='subheader'>Take the quiz to find out what you are! </h2>
-      </div>
+        <div className='header-container'>
+          <h1 className='header'> Are you a dog person or a cat person? </h1>
+          <h2 className='subheader'>Take the quiz to find out what you are! </h2>
+        </div>
         <div className='radio-choice'>
           <p className='question'>Which do you find cutest?</p>
           <div className='radio-container'>
@@ -95,10 +92,8 @@ const App = () => {
         <Link to={'/game'} >
           {animalChoice &&  <button>Start Game</button> }
         </Link>
-
         </div>
       </Route>
-
       <Route exact path='/game'>
         <Game
             animalChoice={animalChoice}
