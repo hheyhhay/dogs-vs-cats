@@ -9,10 +9,10 @@ Deployed site: [whodoyoulove.surge.sh](http://whodoyoulove.surge.sh/)
   - [Technologies](#technologies)
   - [Code Architecture](#code-architecture)
   - [Illustrations](#illustrations)
-  - [Install + Setup](#set-up)
+  - [Install](#install)
   - [Contributors](#contributors)
-	- [Wins](#wins)
-	- [Challenges + Improvements](#challenges-+-Improvements)
+  - [Wins](#wins)
+  - [Challenges + Improvements](#challenges-+-Improvements)
   - [Project Specs](#project-specs)
 
 ## Abstract
@@ -25,10 +25,10 @@ This projet was built for the final solo project for the third module at Turing 
   - React
   - React Router
   - Atom
-	- Restful API
-	- Cypress
-	- HTML
-	- CSS
+  - Restful API
+  - Cypress
+  - HTML
+  -  CSS
 
 
 ## Code Architecture
@@ -61,10 +61,11 @@ This projet was built for the final solo project for the third module at Turing 
 
 ## Illustrations
 
-Use https://gifcap.dev/ to make GIFs
+
+<img src='https://github.com/hheyhhay/dogs-vs-cats/blob/main/recording%20(2).gif' alt="Who do you Love  gif" title="Who do you love gif" width="500"/>
 
 
-## Install + Setup
+## Install
 
 Visit the deployed site: [whodoyoulove.surge.sh](http://whodoyoulove.surge.sh/)
 
@@ -83,14 +84,15 @@ Webpage will open in seperate browser
   - [Hayley Dixon](https://github.com/hheyhhay)
 
 ## Wins
-	- What went well!
-	- Successes
+- The styling and CSS was fun and I feel it looks very good
+- Using two different APIs to fetch the data
+- Building a react app that used game logic 
 
 ## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
+- For future iterations I would like to add a loading gif while the application is fetching new images
+- Use local storage for users to be able to save their favorite images
+- Improve of Cypress Testing
 
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - The project spec & rubric can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
