@@ -20,16 +20,18 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
       setWinner('dog')
     }
   }
-
+  //eslint-disable-next-line
   useEffect(() => {
     findWinner()
+
+  //eslint-disable-next-line
   }, [])
 
   const displayImages = (images) => {
 
     let imageCards = images.map(image => {
       return (
-        <div className='image'>
+        <div className='image' key={image.id}>
           <img src={image.url} alt={`Super cute ${image.type}`}className={`${image.type}-image`} />
         </div>
         )
