@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Favorites.css'
+import PropTypes from 'prop-types';
+
 
 const Favorites = ({favoriteCats, favoriteDogs, clearFavorites }) => {
   const totalFavorite = favoriteCats.concat(favoriteDogs)
@@ -29,3 +31,9 @@ const Favorites = ({favoriteCats, favoriteDogs, clearFavorites }) => {
 }
 
 export default Favorites;
+
+Favorites.propTypes = {
+  favoriteCats: PropTypes.array.isRequired,
+  favoriteDogs: PropTypes.array.isRequired,
+  clearFavorites: PropTypes.func.isRequired
+}

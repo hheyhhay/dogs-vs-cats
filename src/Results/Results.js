@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './Results.css';
 
@@ -70,3 +71,10 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
 };
 
 export default Results;
+
+Results.propTypes = {
+  favoriteCats: PropTypes.array.isRequired,
+  favoriteDogs: PropTypes.array.isRequired,
+  animalChoice: PropTypes.string.isRequired,
+  clearFavorites: PropTypes.func.isRequired
+}
