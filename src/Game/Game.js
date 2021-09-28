@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import './Game.css';
+import PropTypes from 'prop-types';
 
 const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount } ) => {
 
@@ -28,3 +29,11 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
 }
 
 export default Game;
+
+Game.propTypes = {
+  animalChoice: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  dogPicture: PropTypes.object.isRequired,
+  catPicture: PropTypes.object.isRequired,
+  imageCount: PropTypes.number.isRequired
+}
