@@ -2,7 +2,7 @@ export const fetchCatData = async () => {
 
   let response = await fetch('https://api.thecatapi.com/v1/images/search')
 
-  if (response.status === 400) {
+  if (response.status === 404) {
     throw new Error('404 error - Destination not found')
   } else if (response.status === 500) {
     throw new Error('500 error - Can\'t access pictures right now')
