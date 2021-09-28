@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Results.css'
+import './Results.css';
 
 const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
@@ -67,6 +67,6 @@ const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
     </Link>
     </div>
   )
-}
+};
 
 export default Results;
