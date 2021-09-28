@@ -3,11 +3,24 @@
   min-height: 100vw;
   min-width: 100vw;
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Biryani', sans-serif;
-  border: 2px solid #fdc5f5;
+
+}
+.header-container {
+  margin-top: 0;
+  padding: 3%;
+  background-color: #95a4ff;
+  opacity: 0.75;
+  margin-bottom: 3%;
+  width: 100%;
 }
 
+
+.subheader {
+  font-style: italic;
+  font-size: 12px;
+}
 .radio-choice {
   display: flex;
   flex-direction: column;
@@ -34,12 +47,12 @@
   padding: 0%;
     text-align: left;
 }
+
 .container {
   position: relative;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 12px;
-
 }
 
 button {
@@ -48,11 +61,20 @@ button {
   margin-top: 3%;
   margin-bottom: 3%;
   line-height: 24px;
-   padding: 0 20px;
-   border: 1px solid rgba(0,0,0,1);
-   box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px rgba(0,0,0,1);
-   font-size: 12px;
-   width: 100%;
-   align-items: right;
-   background-color: white;
+  padding: 0 20px;
+  border: 1px solid rgba(0,0,0,1);
+  box-shadow: 3px 3px 1px #95a4ff, 3px 3px 1px 1px rgba(0,0,0,1);
+  font-size: 12px;
+  width: 100%;
+  align-items: right;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .radio-choice {
+
+    width: 50%;
+    margin: auto;
+
+  }
 }

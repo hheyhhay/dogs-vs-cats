@@ -7,7 +7,7 @@ export const organizeCat = (apiData) => {
   })
 
   return simplifyData;
-}
+};
 
 export const organizeDog = (apiData) => {
 
@@ -17,4 +17,4 @@ export const organizeDog = (apiData) => {
   simplifyData.type = 'dog';
 
   return simplifyData
-}
+};

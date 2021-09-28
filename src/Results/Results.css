@@ -1,18 +1,23 @@
-.favorite-section {
+.results-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  padding: 0;
 }
-.favorite-container {
+
+h1 {
+  font-size: 18px;
+}
+
+.winning-images {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
 }
 
 .image {
   background: #ffffff;
-  margin: 2%;
   padding: 15px 15px 40px;
   text-align: center;
   text-decoration: none;
@@ -22,18 +27,28 @@
   -webkit-transition: all .20s linear;
   -moz-transition: all .20s linear;
   transition: all .20s linear;
-  z-index: 0;
   position: relative;
 }
-.cat-image {
-  display: block;
-  width: 250px;
-  border: 1px solid black;
+
+.result-button {
+  width: 50%;
+  margin: 3% auto 3% auto;
+  background-color: white;
+  z-index: 100;
 }
 
-.dog-image {
+.restart {
+  margin-top: 20%;
+}
 
-  display: block;
-  border: 1px solid black;
-  width: 250px;
+@media screen and (min-width: 768px) {
+  .result-button {
+    width: 20%;
+    margin: 1% auto 1% auto;
+  }
+  
+  .winning-images {
+    margin: auto;
+    max-width: 80%;
+  }
 }
