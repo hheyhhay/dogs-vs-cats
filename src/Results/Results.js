@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './Results.css';
 
-const Results = ( {favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
+const Results = ({ favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
   const [winner, setWinner] = useState('');
   const [images, setImages] = useState([]);
 

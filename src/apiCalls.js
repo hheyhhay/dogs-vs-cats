@@ -7,6 +7,7 @@ export const fetchCatData = async () => {
   } else if (response.status === 500) {
     throw new Error('500 error - Can\'t access pictures right now')
   }
+  
   let cats = await response.json();
 
   return cats
