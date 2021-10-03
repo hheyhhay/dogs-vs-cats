@@ -14,10 +14,10 @@ const App = () => {
   const [animalChoice, setAnimalChoice] = useState('');
   const [favoriteCats, setFavoriteCats] = useState([]);
   const [favoriteDogs, setFavoriteDogs] = useState([]);
-  const [catPicture, setCatPicture] =useState({});
+  const [catPicture, setCatPicture] = useState({});
   const [dogPicture, setDogPicture] = useState({});
 
-  const [imageCount,  setImageCount] = useState(0);
+  const [imageCount, setImageCount] = useState(0);
   const [error, setError] = useState('');
 
   const getData = async () => {
@@ -26,12 +26,10 @@ const App = () => {
         const simpleCatData = organizeCat(catData);
         setCatPicture(simpleCatData);
       })
-
       fetchDogData().then((dogData) => {
         const simpleDogData = organizeDog(dogData);
         setDogPicture(simpleDogData);
       })
-
     }
     catch(error)
     {
@@ -45,12 +43,12 @@ const App = () => {
 
   const handleChange = (e, image) => {
 
-    if (e.target.className === 'cat-image'){
+    if (e.target.className === 'cat-image') {
         setFavoriteCats([...favoriteCats, image])
     } else if (e.target.className === 'dog-image') {
       setFavoriteDogs([...favoriteDogs, image])
     }
-    setImageCount(imageCount+1)
+    setImageCount(imageCount + 1)
     getData()
   }
 
@@ -66,9 +64,9 @@ const App = () => {
     }
 
   return (
-    <main className='App' onChange = {(e) => onChange(e)}>
+    <main className='App' onChange={ (e) => onChange(e) }>
       {error &&  <Redirect to='/error' />}
-      <Route exact path='/'>
+      <Route exact path = '/'>
         <div className='header-container'>
           <h1 className='header'> Are you a dog person or a cat person? </h1>
           <h2 className='subheader'>Take the quiz to find out what you are! </h2>
@@ -78,15 +76,15 @@ const App = () => {
           <div className='radio-container'>
             <label className='container'>
               <input type='radio' value='dog' name='animal-choice'/>
-              <span className = 'radio-button'></span> Dogs!
+              <span className='radio-button'></span> Dogs!
             </label>
             <label className='container'>
               <input type='radio' value='cat' name='animal-choice'/>
-              <span className = 'radio-button'></span> Cats!
+              <span className='radio-button'></span> Cats!
             </label>
             <label className='container'>
               <input type='radio' value='unknown' name='animal-choice'/>
-              <span className = 'radio-button'></span> Both!
+              <span className='radio-button'></span> Both!
             </label>
           </div>
         <Link to={'/game'} >
@@ -118,7 +116,7 @@ const App = () => {
           clearFavorites={clearFavorites}
           />
       </Route>
-      <Route exact path ='/error'>
+      <Route exact path='/error'>
             <Error
               error={error}
               />

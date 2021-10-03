@@ -3,7 +3,7 @@ import './Error.css';
 import errorImage from './error-image.jpg';
 import PropTypes from 'prop-types';
 
-const Error = ( { error }) => {
+const Error = ({ error }) => {
   return(
     <div className='error-container'>
       <p>Sorry, we can't find access the dogs and cats right now, try again later</p>

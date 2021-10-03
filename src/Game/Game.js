@@ -21,9 +21,7 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
         {dogPicture && <img src={dogPicture.url} alt={`Super cute ${dogPicture.type}`} className='dog-image' onClick={(e) => handleChange(e, dogPicture)} />}
       </div>
     </div>}
-    { imageCount === 7 && <Redirect to='/results'
-                            />
-    }
+    { imageCount === 7 && <Redirect to='/results' />}
     </div>
   )
 }
