@@ -123,5 +123,6 @@ const App = () => {
       </Route>
     </main>
   )
-}
+};
+
 export default App;
