@@ -65,7 +65,7 @@ const App = () => {
 
   return (
     <main className='App' onChange={ (e) => onChange(e) }>
-      {error &&  <Redirect to='/error' />}
+      { error &&  <Redirect to='/error' /> }
       <Route exact path = '/'>
         <div className='header-container'>
           <h1 className='header'> Are you a dog person or a cat person? </h1>
@@ -87,41 +87,42 @@ const App = () => {
               <span className='radio-button'></span> Both!
             </label>
           </div>
-        <Link to={'/game'} >
-          {animalChoice &&  <button>Start Game</button> }
+        <Link to={ '/game' } >
+          { animalChoice &&  <button>Start Game</button> }
         </Link>
         </div>
       </Route>
       <Route exact path='/game'>
         <Game
-            animalChoice={animalChoice}
-            handleChange={handleChange}
-            catPicture={catPicture}
-            dogPicture={dogPicture}
-            imageCount={imageCount}
+            animalChoice={ animalChoice }
+            handleChange={ handleChange }
+            catPicture={ catPicture }
+            dogPicture={ dogPicture }
+            imageCount={ imageCount }
             />
       </Route>
       <Route exact path='/results' >
         <Results
-          animalChoice={animalChoice}
-          favoriteCats={favoriteCats}
-          favoriteDogs={favoriteDogs}
-          clearFavorites={clearFavorites}
+          animalChoice={ animalChoice }
+          favoriteCats={ favoriteCats }
+          favoriteDogs={ favoriteDogs }
+          clearFavorites={ clearFavorites }
           />
       </Route>
       <Route exact path='/favorites'>
         <Favorites
-          favoriteCats={favoriteCats}
-          favoriteDogs={favoriteDogs}
-          clearFavorites={clearFavorites}
+          favoriteCats={ favoriteCats }
+          favoriteDogs={ favoriteDogs }
+          clearFavorites={ clearFavorites }
           />
       </Route>
       <Route exact path='/error'>
             <Error
-              error={error}
+              error={ error }
               />
       </Route>
     </main>
   )
-}
+};
+
 export default App;

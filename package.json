@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
@@ -16,9 +15,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "start-server-and-test start http://localhost:3000 cypress",
     "eject": "react-scripts eject",
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +38,8 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^8.4.1"
+    "@testing-library/react": "^12.1.2",
+    "cypress": "^8.4.1",
+    "start-server-and-test": "^1.14.0"
   }
 }
