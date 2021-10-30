@@ -1,4 +1,5 @@
 describe('Application for results spec', () => {
+  
   it('Should be able to get results after 7 rounds', () => {
     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
 
