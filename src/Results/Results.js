@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import './Results.css';
 
 const Results = ({ favoriteCats, favoriteDogs, animalChoice, clearFavorites }) => {
@@ -10,8 +9,7 @@ const Results = ({ favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
 
   const findWinner = () => {
 
-    if(favoriteCats.length > favoriteDogs.length ) {
-
+    if (favoriteCats.length > favoriteDogs.length) {
       let cards = displayImages(favoriteCats)
       setImages([cards])
       setWinner('cat')
@@ -21,10 +19,10 @@ const Results = ({ favoriteCats, favoriteDogs, animalChoice, clearFavorites }) =
       setWinner('dog')
     }
   }
+
   //eslint-disable-next-line
   useEffect(() => {
     findWinner()
-
   //eslint-disable-next-line
   }, [])
 

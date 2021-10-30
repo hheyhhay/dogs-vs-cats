@@ -5,8 +5,8 @@
   margin: 0;
   font-size: 14px;
   font-family: 'Biryani', sans-serif;
-
 }
+
 .header-container {
   margin-top: 0;
   padding: 3%;
@@ -16,11 +16,11 @@
   width: 100%;
 }
 
-
 .subheader {
   font-style: italic;
   font-size: 12px;
 }
+
 .radio-choice {
   display: flex;
   flex-direction: column;
@@ -72,9 +72,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .radio-choice {
-
     width: 50%;
     margin: auto;
-
   }
-}
+};

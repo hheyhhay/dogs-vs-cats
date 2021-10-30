@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import './Game.css';
 import PropTypes from 'prop-types';
 
-const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount } ) => {
+const Game = ({ animalChoice, handleChange, catPicture, dogPicture, imageCount }) => {
 
   return (
     <div className='game-container'>
@@ -22,7 +22,7 @@ const Game = ( { animalChoice, handleChange, catPicture, dogPicture, imageCount 
       </div>
     </div> }
     { imageCount === 7 && <Redirect to='/results' /> }
-    </div>
+  </div>
   )
 }
 
