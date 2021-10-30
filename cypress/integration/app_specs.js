@@ -1,8 +1,13 @@
  describe('Application flow on main page', () => {
-
+   beforeEach(() => {
+     cy.visit("localhost:3000")
+     cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+     cy.visit("localhost:3000")
+   })
 
    it('Should be able to choice a animal preference and start the game on a new page', () => {
-    cy.visit("localhost:3000")
+
     cy.get('[type=radio]').first().check()
     cy.get('button').click()
     cy.url().should('include', "game")
