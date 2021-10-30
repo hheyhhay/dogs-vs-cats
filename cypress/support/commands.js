@@ -1,5 +1,8 @@
-Cypress.Commands.add('interceptAPI', (fixture, url) => {
-  cy.intercept(`${url}`, {
-    fixture: `${fixture}_test_data.json`
+Cypress.Commands.add('interceptAPI', (fixtureDog, urlDog, fixtureCat, urlCat) => {
+  cy.intercept(`${urlDog}`, {
+    fixture: `${fixtureDog}_test_data.json`
+  })
+  cy.intercept(`${urlCat}`, {
+    fixture: `${fixtureCat}_test_data.json  `
   })
 })
