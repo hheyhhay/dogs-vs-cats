@@ -1,11 +1,10 @@
 describe('Application flow for game', () => {
 
-  beforeEach(() => {
-
-  })
-
   it('Should be able to start the game and be routed to new page', () => {
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
     cy.visit("localhost:3000")
+
     cy.get('[type=radio]').first().check()
     cy.get('button').click()
     cy.url().should('include', "game")
@@ -28,12 +27,33 @@ describe('Application flow for game', () => {
   })
 
   it('Should have 7 rounds of images and will show results', () => {
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.cat-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.cat-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.cat-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.cat-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.dog-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.dog-image').click()
+
+      cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+      cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
       cy.get('.dog-image').click()
 
       cy.url().should('include', "results")
@@ -57,10 +77,18 @@ describe('Application flow for game', () => {
     })
 
     it('Should be able to click the favorites button', () => {
-      cy.get('.favorite-button').click()
-        cy.url().should('include', "favorites")
+      cy.get('.favorite-button')
+        .click()
+
+      cy.url().should('eq', 'http://localhost:3000/favorites')
     })
 
-    // it('Should be able to go restart quiz from results page')
+    it('Should be able to go restart quiz from results page', () => {
+      cy.get('[href="/"] > .result-button')
+        .click()
+
+      cy.url().should('eq', 'http://localhost:3000/')
+
+    })
 
 })
