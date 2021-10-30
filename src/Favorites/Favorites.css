@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .favorite-container {
   display: flex;
   padding: 0;
@@ -19,8 +20,8 @@
   transform:rotate(30deg) scale(0.7,0.7);
   top:0%;
   left:-10%;
-
 }
+
 .image:nth-child(2n) {
   margin: -15%;
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
@@ -28,8 +29,8 @@
   bottom: -50%;
   left:8%;
   z-index: 100;
-
 }
+
 .image:nth-child(3n) {
   margin: 0%;
   -webkit-transform:rotate(40deg) scale(0.7,0.7);
@@ -38,6 +39,7 @@
   top:50%;
   left:-10%;
 }
+
 .image:nth-child(4n) {
   margin-top: -25%;
   -webkit-transform:rotate(-30deg) scale(0.7,0.7);
@@ -46,6 +48,7 @@
   top:0%;
   left:-10%;
 }
+
 .image:nth-child(5n) {
   margin: 0;
   -webkit-transform:rotate(-20deg) scale(0.8,0.8);
@@ -55,6 +58,7 @@
   right:20%;
   z-index:3;
 }
+
 .image:nth-child(6n) {
   margin: 0;
   -webkit-transform:rotate(30deg) scale(0.7,0.7);
@@ -63,8 +67,8 @@
   top:60%;
   right:55%;
 }
-.image:nth-child(7n) {
 
+.image:nth-child(7n) {
   -webkit-transform:rotate(10deg) scale(0.7,0.7);
   -moz-transform:rotate(10deg) scale(0.7,0.7);
   transform:rotate(10deg) scale(0.7,0.7);
@@ -72,6 +76,7 @@
   right:25%;
   margin: -25%;
 }
+
 .image:hover {
   z-index:100;
   -webkit-transform:rotate(0deg) scale(1,1);
@@ -88,6 +93,7 @@
     top:0%;
     left:0%;
   }
+
   .image:nth-child(2n) {
     margin: -10%;
     -webkit-transform:rotate(-30deg) scale(0.7,0.7);
@@ -95,6 +101,7 @@
     top:40%;
     right:100%;
   }
+
   .image:nth-child(3n) {
     margin: 0;
     -webkit-transform:rotate(40deg) scale(0.7,0.7);
@@ -103,6 +110,7 @@
     top:50%;
     left:-10%;
   }
+
   .image:nth-child(4n) {
     margin: -15%;
     -webkit-transform:rotate(-30deg) scale(0.7,0.7);
@@ -111,6 +119,7 @@
     top:0%;
     left:5%;
   }
+
   .image:nth-child(5n) {
     margin: 0;
     -webkit-transform:rotate(-20deg) scale(0.8,0.8);
@@ -120,6 +129,7 @@
     left:20%;
     z-index:3;
   }
+
   .image:nth-child(6n) {
     margin: 0;
     -webkit-transform:rotate(30deg) scale(0.7,0.7);
@@ -128,6 +138,7 @@
     top:60%;
     left:-30%;
   }
+
   .image:nth-child(7n) {
     margin: -15%;
     -webkit-transform:rotate(10deg) scale(0.7,0.7);

@@ -65,9 +65,11 @@
   .quiz-container {
     flex-direction: row;
   }
+
   .poloriod-card {
     margin: auto;
   }
+
   .poloriod-card:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -86,9 +88,11 @@
     position: relative;
     top: 15px;
   }
+
   .or-div {
     margin: 0;
   }
+
   .or-div:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -98,4 +102,4 @@
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
   }
-}
+};

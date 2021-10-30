@@ -61,15 +61,15 @@ const App = () => {
     setFavoriteCats([]);
     setFavoriteDogs([]);
     setImageCount(0)
-    }
+  }
 
   return (
     <main className='App' onChange={ (e) => onChange(e) }>
       { error &&  <Redirect to='/error' /> }
       <Route exact path = '/'>
         <div className='header-container'>
-          <h1 className='header'> Are you a dog person or a cat person? </h1>
-          <h2 className='subheader'>Take the quiz to find out what you are! </h2>
+          <h1 className='header'>Are you a dog person or a cat person?</h1>
+          <h2 className='subheader'>Take the quiz to find out what you are!</h2>
         </div>
         <div className='radio-choice'>
           <p className='question'>Which do you find cutest?</p>
