@@ -1,46 +1,54 @@
 describe('Application for results spec', () => {
   it('Should be able to get results after 7 rounds', () => {
-
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
 
     cy.visit("http://whodoyoulove.surge.sh/")
-    cy.get('[type=radio]').first().check()
+
+    cy.get('[type=radio]')
+      .first()
+      .check()
+
     cy.get('button').click()
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.get('.cat-image')
+      .click()
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.get('.cat-image')
+      .click()
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.get('.cat-image')
+      .click()
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
+    cy.get('.cat-image')
+      .click()
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
 
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
+    cy.get('.dog-image')
+      .click()
 
-    cy.url().should('eq', 'http://whodoyoulove.surge.sh/results')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+
+    cy.get('.dog-image')
+      .click()
+
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+
+    cy.get('.dog-image')
+      .click()
+
+    cy.url()
+      .should('eq', 'http://whodoyoulove.surge.sh/results')
   })
 
   it('Should be able to tell you if you were right on guessing if you are a cat or dog person', () => {
-    cy.get('.result-statement').should('have.text', 'You are not a dog person, but a cat person')
+    cy.get('.result-statement')
+      .should('have.text', 'You are not a dog person, but a cat person')
 
     cy.get('img').should(($image) => {
       expect($image).to.have.length(4)
@@ -68,6 +76,7 @@ describe('Application for results spec', () => {
 
     it('Should be able to take test again', () => {
       cy.visit("http://whodoyoulove.surge.sh/results")
+
       cy.get('.restart')
         .click()
 
