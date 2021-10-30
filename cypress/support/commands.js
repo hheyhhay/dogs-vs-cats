@@ -3,6 +3,6 @@ Cypress.Commands.add('interceptAPI', (fixtureDog, urlDog, fixtureCat, urlCat) =>
     fixture: `${fixtureDog}_test_data.json`
   })
   cy.intercept(`${urlCat}`, {
-    fixture: `${fixtureCat}_test_data.json  `
+    fixture: `${fixtureCat}_test_data.json`
   })
 })
