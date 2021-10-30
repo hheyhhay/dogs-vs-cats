@@ -3,7 +3,7 @@ describe('Application flow for game', () => {
   it('Should be able to start the game and be routed to new page', () => {
     cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.visit("localhost:3000")
+    cy.visit("http://whodoyoulove.surge.sh/")
 
     cy.get('[type=radio]').first().check()
     cy.get('button').click()
@@ -80,14 +80,14 @@ describe('Application flow for game', () => {
       cy.get('.favorite-button')
         .click()
 
-      cy.url().should('eq', 'http://localhost:3000/favorites')
+      cy.url().should('eq', 'http://whodoyoulove.surge.sh/favorites')
     })
 
     it('Should be able to go restart quiz from results page', () => {
       cy.get('[href="/"] > .result-button')
         .click()
 
-      cy.url().should('eq', 'http://localhost:3000/')
+      cy.url().should('eq', 'http://whodoyoulove.surge.sh/')
 
     })
 
