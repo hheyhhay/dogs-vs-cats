@@ -1,32 +1,59 @@
 describe('Application flow for Favorites page', () => {
   it('Should be able to show all the favorite photos', () => {
-    cy.visit("localhost:3000")
-    cy.get('[type=radio]').first().check()
-    cy.get('button').click()
-    
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.cat-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
-    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
-    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
-    cy.get('.dog-image').click()
 
-    cy.get('.favorite-button').click()
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+    cy.visit("http://whodoyoulove.surge.sh/")
+
+    cy.get('[type=radio]').first().check()
+    cy.get('button')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.cat-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.cat-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.cat-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.cat-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.dog-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.dog-image')
+      .click()
+
+    cy.interceptAPI("cat", 'https://api.thecatapi.com/v1/images/search')
+    cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random')
+
+    cy.get('.dog-image')
+      .click()
+
+    cy.get('.favorite-button')
+      .click()
+
     cy.url().should('include', 'favorites')
   })
 
@@ -53,12 +80,13 @@ describe('Application flow for Favorites page', () => {
 
     it('Should be able to return to results page', () => {
       cy.get('.return-results').click()
-      cy.url().should('include', "results")
+
+      cy.url().should('eq', 'http://whodoyoulove.surge.sh/results')
     })
 
     it('Should be able to take test again', () => {
-      cy.visit("localhost:3000/favorites");
+      cy.visit("http://whodoyoulove.surge.sh/favorites");
       cy.get('.restart').click()
-      cy.url().should('include', "/")
+      cy.url().should('eq', 'http://whodoyoulove.surge.sh/')
     })
 })
