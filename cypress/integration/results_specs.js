@@ -11,14 +11,17 @@ describe('Application for results spec', () => {
     cy.get('button').click()
 
     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+
     cy.get('.cat-image')
       .click()
 
     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+
     cy.get('.cat-image')
       .click()
 
     cy.interceptAPI("dog", 'https://dog.ceo/api/breeds/image/random', "cat", 'https://api.thecatapi.com/v1/images/search')
+
     cy.get('.cat-image')
       .click()
 
