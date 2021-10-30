@@ -75,21 +75,21 @@ describe('Application flow for Favorites page', () => {
       })
     })
 
-    it('Should be able to return to results page', () => {
-      cy.get('.return-results')
-        .click()
+  it('Should be able to return to results page', () => {
+    cy.get('.return-results')
+      .click()
 
-      cy.url()
-        .should('eq', 'http://whodoyoulove.surge.sh/results')
-    })
+    cy.url()
+      .should('eq', 'http://whodoyoulove.surge.sh/results')
+  })
 
-    it('Should be able to take test again', () => {
-      cy.visit("http://whodoyoulove.surge.sh/favorites");
+  it('Should be able to take test again', () => {
+    cy.visit("http://whodoyoulove.surge.sh/favorites");
 
-      cy.get('.restart')
-        .click()
+    cy.get('.restart')
+      .click()
 
-      cy.url()
-        .should('eq', 'http://whodoyoulove.surge.sh/')
-    })
+    cy.url()
+      .should('eq', 'http://whodoyoulove.surge.sh/')
+  })
 })
