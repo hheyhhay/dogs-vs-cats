@@ -5,7 +5,7 @@ import Results from '../Results/Results';
 import Error from '../Error/Error';
 import { Route, Link, Redirect } from 'react-router-dom';
 
-import { fetchCatData, fetchDogData } from '../apiCalls';
+import { fetchData } from '../apiCalls';
 import { organizeCat, organizeDog } from '../util';
 
 import './App.css';
@@ -16,17 +16,16 @@ const App = () => {
   const [favoriteDogs, setFavoriteDogs] = useState([]);
   const [catPicture, setCatPicture] = useState({});
   const [dogPicture, setDogPicture] = useState({});
-
   const [imageCount, setImageCount] = useState(0);
   const [error, setError] = useState('');
 
   const getData = async () => {
     try {
-      fetchCatData().then((catData) => {
+      fetchData('cat').then((catData) => {
         const simpleCatData = organizeCat(catData);
         setCatPicture(simpleCatData);
       })
-      fetchDogData().then((dogData) => {
+      fetchData('dog').then((dogData) => {
         const simpleDogData = organizeDog(dogData);
         setDogPicture(simpleDogData);
       })
